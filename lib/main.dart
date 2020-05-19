@@ -5,10 +5,12 @@ void main() {
   return runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal.shade800,
         appBar: AppBar(
-          title: Text('Dicee'),
-          backgroundColor: Colors.red,
+          title: Center(
+            child: Text('Dicee'),
+          ),
+          backgroundColor: Colors.teal.shade900,
         ),
         body: DicePage(),
       ),
