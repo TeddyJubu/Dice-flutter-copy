@@ -21,10 +21,10 @@ class DicePage extends StatefulWidget {
 }
 
 class _DicePageState extends State<DicePage> {
+  var lefty = 1;
+  var righty = 1;
   @override
   Widget build(BuildContext context) {
-    var lefty = 4;
-    var righty = 3;
     return Center(
       child: Row(
         children: <Widget>[
@@ -33,7 +33,9 @@ class _DicePageState extends State<DicePage> {
               padding: const EdgeInsets.all(16.0),
               child: FlatButton(
                 onPressed: () {
-                  print('Left button is pressed');
+                  setState(() {
+                    lefty = 4;
+                  });
                 },
                 child: Image.asset('images/dice$lefty.png'),
               ),
@@ -44,7 +46,9 @@ class _DicePageState extends State<DicePage> {
               padding: const EdgeInsets.all(16.0),
               child: FlatButton(
                 onPressed: () {
-                  print('Right button is pressed');
+                  setState(() {
+                    righty = 3;
+                  });
                 },
                 child: Image.asset('images/dice$righty.png'),
               ),
